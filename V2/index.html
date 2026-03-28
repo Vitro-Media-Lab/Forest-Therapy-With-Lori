@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Therapy with Lori | Reiki & Nature Alchemy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-void: #FAF8F5;       /* Soft sunlit cream */
+            --fern-dark: #F2F5F0;     /* Delicate airy sage */
+            --moss: #4A6352;          /* Muted natural green */
+            --alchemy-gold: #D4B872;  /* Softer, whimsical gold */
+            --text-main: #2C3E35;     /* Deep forest green for readability */
+            --text-muted: #6B7C6E;    /* Soft mid-tone sage */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- WHIMSICAL OVERLAYS --- */
+        .geometry-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(var(--alchemy-gold) 1px, transparent 1px),
+                radial-gradient(var(--alchemy-gold) 1px, transparent 1px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            opacity: 0.15; 
+            pointer-events: none;
+            z-index: 1;
+        }
+
+
+        /* --- NAVIGATION --- */
+        header {
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            border-bottom: 1px solid rgba(212, 184, 114, 0.3);
+            background: rgba(250, 248, 245, 0.85);
+            backdrop-filter: blur(8px); 
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .header-logo {
+            height: 90px;
+            width: auto;
+            mix-blend-mode: multiply; 
+        }
+
+        nav ul { display: flex; list-style: none; gap: 40px; }
+        nav a { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-size: 11px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            transition: color 0.4s;
+        }
+        nav a:hover { color: var(--alchemy-gold); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('/assets/1000109314.jpg') center/cover;
+            z-index: 0;
+            filter: brightness(1.1) contrast(0.9);
+        }
+
+        .hero-vignette {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(250, 248, 245, 0.85) 0%, rgba(250, 248, 245, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin-top: 50px;
+        }
+
+        .alchemical-element {
+            color: var(--alchemy-gold);
+            font-size: 24px;
+            margin-bottom: 20px;
+            letter-spacing: 15px;
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            color: var(--text-main);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--alchemy-gold);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* --- SAGE GREEN SECTIONS --- */
+        .synergy-section, .contact-section {
+            position: relative;
+            padding: 100px 5%;
+            background: var(--fern-dark);
+            z-index: 1;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            overflow: hidden;
+        }
+
+        .synergy-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-section {
+            text-align: center;
+        }
+
+        /* --- THE LOGO WATERMARK --- */
+        .synergy-section::before, .contact-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            background: url('/assets/fern_heart.jpg') no-repeat center/contain;
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+
+        /* --- FORCE CONTENT ABOVE WATERMARK --- */
+        .forest-column, .reiki-column, .contact-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .forest-column h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--moss);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .forest-column p {
+            font-weight: 300;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .research-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--alchemy-gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--alchemy-gold);
+            transition: opacity 0.3s;
+        }
+
+        .research-link:hover { opacity: 0.7; }
+
+        .reiki-column {
+            position: relative;
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            padding: 40px;
+            background: #ffffff;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+        }
+
+        .fern-corner {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid var(--alchemy-gold);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .corner-tl { top: -10px; left: -10px; border-radius: 25px 0 25px 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: -10px; right: -10px; border-radius: 0 25px 0 25px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: -10px; left: -10px; border-radius: 0 25px 0 25px; border-right: none; border-top: none; }
+        .corner-br { bottom: -10px; right: -10px; border-radius: 25px 0 25px 0; border-left: none; border-top: none; }
+
+        .reiki-column h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .reiki-column p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-section {
+            position: relative;
+            padding: 120px 5%;
+            background: var(--bg-void);
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrapper { position: relative; padding: 15px; }
+        .about-image { width: 100%; height: auto; border: 1px solid rgba(212, 184, 114, 0.4); border-radius: 2px; }
+
+        .about-content h2 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--moss); margin-bottom: 30px; font-weight: 400; }
+        .about-content p { font-weight: 300; color: var(--text-muted); margin-bottom: 25px; font-size: 1rem; }
+
+        .philosophy-tag {
+            display: inline-block;
+            border-left: 2px solid var(--alchemy-gold);
+            padding-left: 20px;
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 { font-family: 'Cinzel', serif; font-size: 2.5rem; color: var(--moss); margin-bottom: 20px; font-weight: 400; }
+        .contact-section p { color: var(--text-muted); font-weight: 300; margin-bottom: 40px; }
+
+        .form-embed { width: 100%; height: 800px; border: none; background: transparent; }
+
+        /* --- FORM BOX STYLES --- */
+        .form-box {
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            background: #ffffff;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+        }
+
+        .form-box-header {
+            padding: 20px 40px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--moss);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(212, 184, 114, 0.2);
+            background: rgba(212, 184, 114, 0.05);
+        }
+
+        .form-box-content { padding: 20px; }
+
+        /* --- REIKI ADD-ON STYLES --- */
+        .reiki-addon {
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            background: #ffffff;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+        }
+
+        .reiki-addon summary {
+            list-style: none;
+            padding: 20px 40px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--alchemy-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: background 0.4s;
+            background: rgba(212, 184, 114, 0.05);
+        }
+
+        .reiki-addon summary:hover { background: rgba(212, 184, 114, 0.1); }
+        .reiki-addon summary::-webkit-details-marker { display: none; }
+        .addon-content { padding: 20px; border-top: 1px solid rgba(212, 184, 114, 0.2); }
+
+        /* --- ADDITIONAL SERVICES LIST --- */
+        .services-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 40px;
+            background: var(--bg-void);
+            border: 1px solid rgba(212, 184, 114, 0.3);
+            border-radius: 2px;
+        }
+
+        .services-list h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--moss);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .services-list ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .services-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .services-list li::before {
+            content: '🜃';
+            position: absolute;
+            left: 0;
+            color: var(--alchemy-gold);
+            font-size: 14px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--bg-void);
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-link {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            color: var(--alchemy-gold);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            opacity: 0.8;
+            transition: opacity 0.4s;
+        }
+
+        .footer-link:hover { opacity: 1; }
+
+        .copyright {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 900px) {
+            header { flex-direction: column; gap: 20px; padding: 20px 5%; }
+            .logo-wrapper { justify-content: center; flex-direction: column; }
+            nav ul { gap: 20px; }
+            .synergy-section { grid-template-columns: 1fr; }
+            .about-container { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 480px) {
+            nav a { font-size: 9px; }
+            .form-embed { height: 1000px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-wrapper">
+            <img src="/assets/Screenshot_20260305_151824_Chrome.jpg" alt="Forest Therapy With Lori Logo" class="header-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#journey">The Practice</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-vignette"></div>
+        <div class="geometry-bg"></div>
+        
+        <div class="hero-content">
+            <div class="alchemical-element">🜃 🜄 🜁 🜂</div>
+            <h1>Return to the <span>Source.</span></h1>
+            <p>Guided by Lori Young. A deeply immersive forest therapy experience, unlocked and amplified through the ancient practice of Reiki energetic preconditioning.</p>
+        </div>
+    </section>
+
+    <section class="synergy-section" id="journey">
+        <div class="forest-column">
+            <h2>The Wisdom of the Forest.</h2>
+            <p>Forest therapy is more than a walk in the woods; it is an active dialogue with the natural world. Regular time among the trees is scientifically proven to reduce stress, anxiety, and depression while boosting mood, vitality, and creativity.</p>
+            <p>The benefits of forest therapy include increased natural killer (NK) cells that boost immune system response. Phytoncides released from trees contribute significantly to this increased immunity and decreased production of stress hormones.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2793341/" target="_blank" class="research-link">Explore the research on Phytoncides & Immunity</a>
+        </div>
+        <div class="reiki-column">
+            <span class="fern-corner corner-tl"></span>
+            <span class="fern-corner corner-tr"></span>
+            <span class="fern-corner corner-bl"></span>
+            <span class="fern-corner corner-br"></span>
+            <h3>The Alchemical Key:<br>Reiki Preconditioning</h3>
+            <p>To fully receive the medicine of the forest, the vessel must be prepared.</p>
+            <p style="margin-top: 15px; color: var(--alchemy-gold); font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">The 20% preparation that unlocks the 80% experience.</p>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="geometry-bg"></div>
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <img src="/assets/1000038680.jpg" alt="Lori Young" class="about-image">
+            </div>
+            <div class="about-content">
+                <h2>The Alchemist Behind the Journey</h2>
+                <p>Lori Young is a certified Forest Therapy Guide and Reiki Master dedicated to bridging the gap between modern stress and ancestral peace.</p>
+                <div class="philosophy-tag">"When we quiet the mind through Reiki, the forest finally has the space to speak."</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2>Begin Your Alchemy</h2>
+            <p>Schedule your immersion by following the path below.</p>
+            
+            <div class="form-box">
+                <div class="form-box-header">
+                    <span>🜃</span> Forest Therapy Immersion <span>🜃</span>
+                </div>
+                <div class="form-box-content">
+                    <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLScFC8D9ze9wKXrwCT-QGb6uyGawfXvKLSfw05QR-SPaIZ4ZBQ/viewform?embedded=true">Loading…</iframe>
+                </div>
+            </div>
+
+            <details class="reiki-addon">
+                <summary><span>🜂</span> Add Reiki Preconditioning <span>🜂</span></summary>
+                <div class="addon-content">
+                    <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSfnZBHLksEERCGPDLlVUQ_I3vFGwzRKyKr1hzcYWjF9ZLcYJA/viewform?embedded=true">Loading…</iframe>
+                </div>
+            </details>
+            
+            <div class="services-list">
+                <h3>Additional Offerings</h3>
+                <ul>
+                    <li>One-on-one Forest Therapy or Forest Therapy for a private group</li>
+                    <li>Yoga one-on-ones, yoga for Bachelorette parties, yoga for private parties</li>
+                    <li>Reiki energy healing sessions — both distance (over Zoom/Teams) and in-person sessions available</li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p class="copyright">&copy; 2026 Lori Young. All Rights Reserved.</p>
+        <a href="https://www.vitromedialab.com/" target="_blank" class="footer-link">Made in Vitro</a>
+    </footer>
+
+</body>
+</html>
