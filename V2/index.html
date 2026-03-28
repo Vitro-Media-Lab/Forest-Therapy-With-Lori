@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forest Therapy with Lori | Reiki & Nature Alchemy</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Forest Therapy with Lori" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
     <style>
         :root {
             --bg-void: #FAF8F5;       /* Soft sunlit cream */
@@ -90,7 +99,8 @@
         .hero-bg {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: url('/assets/1000109314.jpg') center/cover;
+            /* FIXED PATH: Added dot for relative pathing */
+            background: url('./assets/1000109314.jpg') center/cover;
             z-index: 0;
             filter: brightness(1.1) contrast(0.9);
         }
@@ -172,7 +182,8 @@
             right: -100px;
             width: 700px;
             height: 700px;
-            background: url('/assets/fern_heart.jpg') no-repeat center/contain;
+            /* FIXED PATH: Added dot for relative pathing */
+            background: url('./assets/fern_heart.jpg') no-repeat center/contain;
             opacity: 0.04;
             mix-blend-mode: multiply;
             pointer-events: none;
@@ -430,6 +441,7 @@
         }
 
         @media (max-width: 480px) {
+            .logo-text { font-size: 16px; gap: 10px; }
             nav a { font-size: 9px; }
             .form-embed { height: 1000px; }
         }
@@ -439,7 +451,7 @@
 
     <header>
         <a href="#" class="logo-wrapper">
-            <img src="/assets/Screenshot_20260305_151824_Chrome.jpg" alt="Forest Therapy With Lori Logo" class="header-logo">
+            <img src="./assets/Screenshot_20260305_151824_Chrome.jpg" alt="Forest Therapy With Lori Logo" class="header-logo">
         </a>
         <nav>
             <ul>
@@ -488,7 +500,7 @@
                 <span class="fern-corner corner-tr"></span>
                 <span class="fern-corner corner-bl"></span>
                 <span class="fern-corner corner-br"></span>
-                <img src="/assets/1000038680.jpg" alt="Lori Young" class="about-image">
+                <img src="./assets/1000038680.jpg" alt="Lori Young" class="about-image">
             </div>
             <div class="about-content">
                 <h2>The Alchemist Behind the Journey</h2>
