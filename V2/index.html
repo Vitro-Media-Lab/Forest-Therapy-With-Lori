@@ -429,19 +429,6 @@
             z-index: 2;
         }
 
-        .footer-link {
-            font-family: 'Cinzel', serif;
-            font-size: 10px;
-            color: var(--alchemy-gold);
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            opacity: 0.8;
-            transition: opacity 0.4s;
-        }
-
-        .footer-link:hover { opacity: 1; }
-
         .copyright {
             font-size: 10px;
             color: var(--text-muted);
@@ -463,6 +450,76 @@
             .logo-text { font-size: 16px; gap: 10px; }
             nav a { font-size: 9px; }
             .form-embed { height: 1000px; }
+        }
+
+        /* --- CONSULTATION BOX --- */
+        .consultation-box {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        .consultation-box a {
+            color: var(--alchemy-gold);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .consultation-box a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* --- FOOTER SOCIAL --- */
+        .footer-social {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-social a {
+            color: var(--text-muted);
+            transition: color 0.4s ease, transform 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-social a:hover {
+            color: var(--alchemy-gold);
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
+
+        .instagram-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* --- FOOTER LINK --- */
+        .footer-link {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            opacity: 0.8;
+            transition: opacity 0.4s;
+        }
+
+        .footer-link:hover { 
+            opacity: 1; 
+        }
+
+        /* --- ISOLATED VITRO ANIMATION --- */
+        .vitro-text {
+            display: inline-block; /* Required for the lift animation to work */
+            color: var(--text-muted); /* Starts gold (flipped from the Instagram icon) */
+            transition: color 0.4s ease, transform 0.4s ease;
+        }
+
+        .footer-link:hover .vitro-text {
+            color: var(--alchemy-gold); /* Turns muted on hover */
+            transform: translateY(-3px); /* Subtle lift effect */
         }
     </style>
 </head>
@@ -489,7 +546,7 @@
         <div class="hero-content">
             <div class="alchemical-element">🜃 🜄 🜁 🜂</div>
             <h1>Return to the <span>Source.</span></h1>
-            <p>Guided by Lori Young. A deeply immersive forest therapy experience, unlocked and amplified through the ancient practice of Reiki energetic preconditioning.</p>
+            <p>A deeply immersive forest therapy experience, unlocked and amplified through the ancient practice of Reiki.</p>
         </div>
     </section>
 
@@ -506,8 +563,8 @@
             <span class="fern-corner corner-bl"></span>
             <span class="fern-corner corner-br"></span>
             <h3>The Alchemical Key:<br>Reiki Preconditioning</h3>
-            <p>To fully receive the medicine of the forest, the vessel must be prepared.</p>
-            <p style="margin-top: 15px; color: var(--alchemy-gold); font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">The 20% preparation that unlocks the 80% experience.</p>
+            <p>To receive the medicine of the forest, the vessel must be prepared.</p>
+            <p style="margin-top: 15px; color: var(--alchemy-gold); font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">It is the quiet, often unseen 20%—the intention, the cleansing, the willingness—that unlocks the other 80%: the depth, the revelation, the transformation.</p>
         </div>
     </section>
 
@@ -523,8 +580,9 @@
             </div>
             <div class="about-content">
                 <h2>The Alchemist Behind the Journey</h2>
-                <p>Lori Young is a certified Forest Therapy Guide and Reiki Master dedicated to bridging the gap between modern stress and ancestral peace.</p>
-                <div class="philosophy-tag">"When we quiet the mind through Reiki, the forest finally has the space to speak."</div>
+                <p>Lori Young is a certified Forest Therapy Guide and Reiki Master, devoted to bridging the space between modern overwhelm and ancestral calm. After a childhood rooted in the wild and 15 years serving as a Park Ranger, Lori’s path was shaped by the quiet guidance of nature and the wisdom of the trees. Through her own awakenings in the forest, she was called to share what she had received—ancestral knowledge, deep presence, and a way of remembering.</p>
+                <p>Now, she guides others back to that same organic connection, where healing unfolds naturally and the forest becomes both a teacher and a home.</p>
+                <div class="philosophy-tag">"When Reiki energy softens the mind and opens the heart, the forest no longer whispers — it speaks with a clarity the soul can truly hear."</div>
             </div>
         </div>
     </section>
@@ -544,7 +602,7 @@
             </div>
 
             <details class="reiki-addon">
-                <summary><span>🜂</span> Add Reiki Preconditioning <span>🜂</span></summary>
+                <summary><span>🜂</span> Reiki Energy Healing and Yoga sessions <span>🜂</span></summary>
                 <div class="addon-content">
                     <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSfnZBHLksEERCGPDLlVUQ_I3vFGwzRKyKr1hzcYWjF9ZLcYJA/viewform?embedded=true">Loading…</iframe>
                 </div>
@@ -554,17 +612,29 @@
                 <h3>Additional Offerings</h3>
                 <ul>
                     <li>One-on-one Forest Therapy or Forest Therapy for a private group</li>
-                    <li>Yoga one-on-ones, yoga for Bachelorette parties, yoga for private parties</li>
+                    <li>Yoga one-on-ones, yoga for Bachelorette parties or private parties</li>
                     <li>Reiki energy healing sessions — both distance (over Zoom/Teams) and in-person sessions available</li>
                 </ul>
             </div>
-            
+
+            <div class="consultation-box">
+                <p>Free 15 minute consultation Contact: <a href="mailto:foresttherapywithlori@gmail.com">foresttherapywithlori@gmail.com</a></p>
+            </div>
         </div>
     </section>
 
     <footer>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/foresttherapywithlori/" target="_blank" aria-label="Visit Forest Therapy with Lori on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
         <p class="copyright">&copy; 2026 Lori Young. All Rights Reserved.</p>
-        <a href="https://www.vitromedialab.com/" target="_blank" class="footer-link">Made in Vitro</a>
+        <a href="https://www.vitromedialab.com/" target="_blank" class="footer-link">Made in <span class="vitro-text">Vitro</span></a>
     </footer>
 
 </body>
