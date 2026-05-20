@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Forest Therapy with Lori | Reiki & Nature Alchemy</title>
+    <meta name="title" content="Forest Therapy with Lori | Reiki & Nature Alchemy">
+    <meta name="description" content="Experience the healing power of Shinrin yoku (forest bathing) in Western Pennsylvania. Join Lori Young for restorative wellness events in Butler and Pittsburgh, PA.">
+    <meta name="keywords" content="Shinrin yoku, Forest Bathing, Western Pennsylvania, Butler PA, Pittsburgh PA, Wellness events western PA, Wellness Butler PA, Wellness events pittsburgh pa, forest therapy, Reiki">
+    <meta name="author" content="Lori Young">
+    <link rel="canonical" href="https://foresttherapywithlori.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://foresttherapywithlori.com/">
+    <meta property="og:title" content="Forest Therapy with Lori | Reiki & Nature Alchemy">
+    <meta property="og:description" content="Join certified guide Lori Young for deeply immersive Forest Therapy experiences, unlocked and amplified through the ancient practice of Reiki energetic preconditioning.">
+    <meta property="og:image" content="https://foresttherapywithlori.com/assets/Screenshot_20260305_151824_Chrome.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://foresttherapywithlori.com/">
+    <meta property="twitter:title" content="Forest Therapy with Lori | Reiki & Nature Alchemy">
+    <meta property="twitter:description" content="Join certified guide Lori Young for deeply immersive Forest Therapy experiences, unlocked and amplified through the ancient practice of Reiki energetic preconditioning.">
+    <meta property="twitter:image" content="https://foresttherapywithlori.com/assets/Screenshot_20260305_151824_Chrome.jpg">
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Forest Therapy with Lori" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+        :root {
+            --bg-void: #FAF8F5;       /* Soft sunlit cream */
+            --fern-dark: #F2F5F0;     /* Delicate airy sage */
+            --moss: #4A6352;          /* Muted natural green */
+            --alchemy-gold: #D4B872;  /* Softer, whimsical gold */
+            --text-main: #2C3E35;     /* Deep forest green for readability */
+            --text-muted: #6B7C6E;    /* Soft mid-tone sage */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-void);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- WHIMSICAL OVERLAYS --- */
+        .geometry-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(var(--alchemy-gold) 1px, transparent 1px),
+                radial-gradient(var(--alchemy-gold) 1px, transparent 1px);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            opacity: 0.15; 
+            pointer-events: none;
+            z-index: 1;
+        }
+
+
+        /* --- NAVIGATION --- */
+        header {
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+            border-bottom: 1px solid rgba(212, 184, 114, 0.3);
+            background: rgba(250, 248, 245, 0.85);
+            backdrop-filter: blur(8px); 
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .header-logo {
+            height: 120px;
+            width: auto;
+            mix-blend-mode: multiply; 
+        }
+
+        nav ul { display: flex; list-style: none; gap: 40px; }
+        nav a { 
+            color: var(--text-main); 
+            text-decoration: none; 
+            font-size: 11px; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            transition: color 0.4s;
+        }
+        nav a:hover { color: var(--alchemy-gold); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            /* FIXED PATH: Added dot for relative pathing */
+            background: url('./assets/1000109314.jpg') center/cover;
+            z-index: 0;
+            filter: brightness(1.1) contrast(0.9);
+        }
+
+        .hero-vignette {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(250, 248, 245, 0.85) 0%, rgba(250, 248, 245, 0.3) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin-top: 50px;
+        }
+
+        .alchemical-element {
+            color: var(--text-muted);
+            font-size: 24px;
+            margin-bottom: 20px;
+            letter-spacing: 15px;
+            opacity: 0.9;
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            color: var(--text-main);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* --- SAGE GREEN SECTIONS --- */
+        .synergy-section, .contact-section {
+            position: relative;
+            padding: 100px 5% 0px 5%;
+            background: var(--fern-dark);
+            z-index: 1;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            overflow: hidden;
+        }
+
+        .synergy-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+
+        .contact-section {
+            text-align: center;
+        }
+
+        /* --- THE LOGO WATERMARK --- */
+        .synergy-section::before, .contact-section::before {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 700px;
+            height: 700px;
+            /* FIXED PATH: Added dot for relative pathing */
+            background: url('./assets/fern_heart.jpg') no-repeat center/contain;
+            opacity: 0.04;
+            mix-blend-mode: multiply;
+            pointer-events: none;
+            z-index: 0;
+            transform: rotate(-15deg);
+        }
+
+        /* --- FORCE CONTENT ABOVE WATERMARK --- */
+        .forest-column, .reiki-column, .contact-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .forest-column h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--moss);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .forest-column p {
+            font-weight: 300;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .research-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-muted);
+            transition: opacity 0.3s;
+        }
+
+        .research-link:hover { opacity: 0.7; }
+
+        .reiki-column {
+            position: relative;
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            padding: 40px;
+            background: #ffffff;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+        }
+
+        .fern-corner {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 1px solid var(--alchemy-gold);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .corner-tl { top: -10px; left: -10px; border-radius: 25px 0 25px 0; border-right: none; border-bottom: none; }
+        .corner-tr { top: -10px; right: -10px; border-radius: 0 25px 0 25px; border-left: none; border-bottom: none; }
+        .corner-bl { bottom: -10px; left: -10px; border-radius: 0 25px 0 25px; border-right: none; border-top: none; }
+        .corner-br { bottom: -10px; right: -10px; border-radius: 25px 0 25px 0; border-left: none; border-top: none; }
+
+        .reiki-column .corner-tl { top: -16px; left: -16px; }
+        .reiki-column .corner-tr { top: -16px; right: -16px; }
+        .reiki-column .corner-bl { bottom: -16px; left: -16px; }
+        .reiki-column .corner-br { bottom: -16px; right: -16px; }
+        .reiki-column h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .reiki-column p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-section {
+            position: relative;
+            padding: 120px 5%;
+            background: var(--bg-void);
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image-wrapper { position: relative; padding: 15px; }
+        .about-image { width: 100%; height: auto; border: 1px solid rgba(212, 184, 114, 0.4); border-radius: 2px; }
+
+        .about-content h2 { font-family: 'Cinzel', serif; font-size: 2.2rem; color: var(--moss); margin-bottom: 30px; font-weight: 400; }
+        .about-content p { font-weight: 300; color: var(--text-muted); margin-bottom: 25px; font-size: 1rem; }
+
+        .philosophy-tag {
+            display: inline-block;
+            border-left: 2px solid var(--text-muted);
+            padding-left: 20px;
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 { font-family: 'Cinzel', serif; font-size: 2.5rem; color: var(--moss); margin-bottom: 20px; font-weight: 400; }
+        .contact-section p { color: var(--text-muted); font-weight: 300; margin-bottom: 40px; }
+
+        .form-embed { width: 100%; height: 800px; border: none; background: transparent; }
+
+        /* --- FORM BOX STYLES --- */
+        .form-box {
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            background: #ffffff;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+        }
+
+        .form-box-header {
+            padding: 20px 40px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--moss);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 1px solid rgba(212, 184, 114, 0.2);
+            background: rgba(212, 184, 114, 0.05);
+        }
+
+        .form-box-content { padding: 20px; }
+
+        /* --- REIKI ADD-ON STYLES --- */
+        .reiki-addon {
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            background: #ffffff;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+        }
+
+        .reiki-addon summary {
+            list-style: none;
+            padding: 20px 40px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: background 0.4s;
+            background: rgba(212, 184, 114, 0.05);
+        }
+
+        .reiki-addon summary:hover { background: rgba(212, 184, 114, 0.1); }
+        .reiki-addon summary::-webkit-details-marker { display: none; }
+        .addon-content { padding: 20px; border-top: 1px solid rgba(212, 184, 114, 0.2); }
+
+        /* --- ADDITIONAL SERVICES LIST --- */
+        .services-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 40px;
+            background: var(--bg-void);
+            border: 1px solid rgba(212, 184, 114, 0.3);
+            border-radius: 2px;
+        }
+
+        .services-list h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--moss);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .services-list ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .services-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .services-list li::before {
+            content: '🜃';
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--bg-void);
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.6;
+        }
+
+        /* --- INSTAGRAM EMBED SECTION --- */
+        .instagram-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 5%;
+            background: var(--bg-void); 
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .instagram-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--moss);
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .ig-wrapper {
+            position: relative;
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            box-shadow: 0 10px 30px rgba(74, 99, 82, 0.05);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @media (max-width: 900px) {
+            header { flex-direction: column; gap: 20px; padding: 20px 5%; }
+            .logo-wrapper { justify-content: center; flex-direction: column; }
+            nav ul { gap: 20px; }
+            .synergy-section { grid-template-columns: 1fr; }
+            .about-container { grid-template-columns: 1fr; gap: 40px; }
+            .offerings-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .consultation-box { padding: 38px 28px; }
+
+            .hero {
+                padding-top: 220px;
+                padding-bottom: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-text { font-size: 16px; gap: 10px; }
+            nav a { font-size: 9px; }
+            .form-embed { height: 1000px; }
+        }
+
+        /* --- CTA BUTTON --- */
+        .cta-button {
+            display: inline-block;
+            padding: 14px 38px;
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: background 0.35s, color 0.35s;
+            background: transparent;
+        }
+        .cta-button:hover {
+            background: var(--text-main);
+            color: #fff;
+        }
+
+        /* --- OFFERINGS SECTION --- */
+        .offerings-section {
+            position: relative;
+            padding: 90px 5%;
+            background: var(--bg-void);
+            z-index: 2;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            text-align: center;
+        }
+        .offerings-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--moss);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .section-intro {
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 1rem;
+        }
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .offering-card {
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            background: #fff;
+            padding: 48px 36px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(74, 99, 82, 0.05);
+            transition: border-color 0.35s;
+        }
+        .offering-card:hover { border-color: rgba(212, 184, 114, 0.8); }
+        .offering-card .corner-tl { top: -16px; left: -16px; }
+        .offering-card .corner-tr { top: -16px; right: -16px; }
+        .offering-card .corner-bl { bottom: -16px; left: -16px; }
+        .offering-card .corner-br { bottom: -16px; right: -16px; }
+        .offering-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .offering-card p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* --- CONSULTATION BOX (upgraded) --- */
+        .consultation-wrapper {
+            padding: 50px 5%;
+            background: var(--bg-void);
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .consultation-box {
+            background: rgba(212, 184, 114, 0.08);
+            border: 1.5px solid rgba(212, 184, 114, 0.5);
+            padding: 50px 50px 45px;
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .consultation-box .corner-tl { top: -16px; left: -16px; }
+        .consultation-box .corner-tr { top: -16px; right: -16px; }
+        .consultation-box .corner-bl { bottom: -16px; left: -16px; }
+        .consultation-box .corner-br { bottom: -16px; right: -16px; }
+        .consultation-box h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--moss);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .consultation-box p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.95rem;
+            max-width: 480px;
+            margin: 0 auto 28px;
+            line-height: 1.8;
+        }
+        .consultation-box a:not(.cta-button) {
+            color: var(--moss);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .consultation-box a:not(.cta-button):hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials-section {
+            position: relative;
+            padding: 90px 5%;
+            background: var(--bg-void);
+            z-index: 2;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            text-align: center;
+        }
+        .testimonials-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--moss);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid rgba(212, 184, 114, 0.35);
+            padding: 32px 28px;
+            text-align: left;
+            box-shadow: 0 6px 20px rgba(74, 99, 82, 0.05);
+            transition: border-color 0.35s;
+        }
+        .testimonial-card:hover { border-color: rgba(212, 184, 114, 0.7); }
+        .testimonial-mark {
+            font-size: 2.5rem;
+            color: var(--alchemy-gold);
+            opacity: 0.5;
+            line-height: 1;
+            margin-bottom: 12px;
+            font-family: Georgia, serif;
+            display: block;
+        }
+        .testimonial-card p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.88rem;
+            line-height: 1.9;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testimonial-divider {
+            width: 28px;
+            height: 1px;
+            background: var(--alchemy-gold);
+            opacity: 0.5;
+            margin-bottom: 12px;
+        }
+        .testimonial-author {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            color: var(--moss);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* --- FOOTER SOCIAL --- */
+        .footer-social {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-social a {
+            color: var(--text-muted);
+            transition: color 0.4s ease, transform 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-social a:hover {
+            color: var(--alchemy-gold);
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
+
+        .instagram-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* --- FOOTER LINK --- */
+        .footer-link {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            opacity: 0.8;
+            transition: opacity 0.4s;
+        }
+
+        .footer-link:hover { 
+            opacity: 1; 
+        }
+
+        /* --- ISOLATED VITRO ANIMATION --- */
+        .vitro-text {
+            display: inline-block; /* Required for the lift animation to work */
+            color: var(--text-muted); /* Starts gold (flipped from the Instagram icon) */
+            transition: color 0.4s ease, transform 0.4s ease;
+        }
+
+        .footer-link:hover .vitro-text {
+            color: var(--alchemy-gold); /* Turns muted on hover */
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-wrapper">
+            <img src="./assets/logo-transparent.png" alt="Forest Therapy With Lori Logo" class="header-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#offerings">Offerings</a></li>
+                <li><a href="#journey">The Practice</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-vignette"></div>
+        <div class="geometry-bg"></div>
+        
+        <div class="hero-content">
+            <div class="alchemical-element">🜃 🜄 🜁 🜂</div>
+            <h1>Forest Therapy with Lori</h1>
+            <p class="">A deeply immersive forest therapy experience, unlocked and amplified through the ancient practice of Reiki.</p>
+            <a href="#contact" class="cta-button">Schedule Your Immersion</a>
+        </div>
+    </section>
+
+    <!-- ============ OFFERINGS & EXPERIENCES ============ -->
+    <section class="offerings-section" id="offerings">
+        <h2>Offerings &amp; Experiences</h2>
+        <p class="section-intro">Whether you come for the forest, the Reiki, or the yoga — every path leads back to yourself.</p>
+        <div class="offerings-grid">
+
+            <div class="offering-card">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <h3>Forest Therapy Walks</h3>
+                <p>One-on-one or private group immersions in the healing language of the natural world. Slow, intentional, and profoundly restorative.</p>
+            </div>
+
+            <div class="offering-card">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <h3>Yoga Sessions</h3>
+                <p>One-on-one sessions, bachelorette parties, and private group events. Movement that meets you where you are — indoors or in nature.</p>
+            </div>
+
+            <div class="offering-card">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <h3>Reiki Energy Healing</h3>
+                <p>In-person and distance sessions available via Zoom or Teams. Standalone sessions or as preconditioning before your forest immersion.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ CONSULTATION BOX (below offerings) ============ -->
+    <div class="consultation-wrapper">
+        <div class="consultation-box">
+            <span class="fern-corner corner-tl"></span>
+            <span class="fern-corner corner-tr"></span>
+            <span class="fern-corner corner-bl"></span>
+            <span class="fern-corner corner-br"></span>
+            <h3>Not Sure Where to Begin?</h3>
+            <p>Lori offers a complimentary 15-minute consultation to help you find the right path. No pressure — just presence.</p>
+            <a href="mailto:foresttherapywithlori@gmail.com" class="cta-button">Email Lori for a Free Consultation</a>
+        </div>
+    </div>
+
+    <section class="synergy-section" id="journey">
+        <div class="forest-column">
+            <h2>The Wisdom of the Forest.</h2>
+            <p>Forest therapy is more than a walk in the woods; it is an active dialogue with the natural world. Regular time among the trees is scientifically proven to reduce stress, anxiety, and depression while boosting mood, vitality, and creativity.</p>
+            <p>The benefits of forest therapy include increased natural killer (NK) cells that boost immune system response. Phytoncides released from trees contribute significantly to this increased immunity and decreased production of stress hormones.</p>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2793341/" target="_blank" class="research-link">Explore the research on Phytoncides & Immunity</a>
+        </div>
+        <div class="reiki-column">
+            <span class="fern-corner corner-tl"></span>
+            <span class="fern-corner corner-tr"></span>
+            <span class="fern-corner corner-bl"></span>
+            <span class="fern-corner corner-br"></span>
+            <h3>The Alchemical Key:<br>Reiki Preconditioning</h3>
+            <p>To receive the medicine of the forest, the vessel must be prepared.</p>
+            <p style="margin-top: 15px; color: var(--text-main); font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">It is the quiet, often unseen 20%—the intention, the cleansing, the willingness—that unlocks the other 80%: the depth, the revelation, the transformation.</p>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="geometry-bg"></div>
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <img src="./assets/1000038680.jpg" alt="Lori Young" class="about-image">
+            </div>
+            <div class="about-content">
+                <h2>The Alchemist Behind the Journey</h2>
+                <p>Lori Young is a certified Forest Therapy Guide and Reiki Master, devoted to bridging the space between modern overwhelm and ancestral calm. After a childhood rooted in the wild and 15 years serving as a Park Ranger, Lori’s path was shaped by the quiet guidance of nature and the wisdom of the trees. Through her own awakenings in the forest, she was called to share what she had received—ancestral knowledge, deep presence, and a way of remembering.</p>
+                <p>Now, she guides others back to that same organic connection, where healing unfolds naturally and the forest becomes both a teacher and a home.</p>
+                <div class="philosophy-tag">"When Reiki energy softens the mind and opens the heart, the forest no longer whispers — it speaks with a clarity the soul can truly hear."</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials-section" id="testimonials">
+        <h2>From Those Who've Walked the Path</h2>
+        <p class="section-intro" style="margin-bottom: 50px;">What others have carried home with them.</p>
+
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Thank you for the wonderful forest bathing experience you guided us through last Saturday. The feelings of goodness &amp; gratitude for the many gifts Nature provided have stayed with me &amp; expanded over the last week. The tea ceremony was a beautiful bonus! Thank you for your loving &amp; positive perspective on our connections to nature &amp; for sharing your expertise.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Tess</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Lori's energy felt so safe and trusting; I don't think I've ever felt that connected to the outside world. The structure of the walk was balanced and I felt that the effects of the experience were immediate and much more noticeable than I was anticipating. I felt incredibly grounded and relaxed during and even after the session. It was like a massage for my brain and soul.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Emily</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>I was lucky enough to receive a Reiki session from Lori! Since it was my first time, I didn't know what to expect and Lori was patient, informative, and so incredibly kind! Walking into the room you immediately feel your body relax. The entire session made me feel relaxed, comfortable, and so incredibly light when leaving! I highly highly recommend seeing Lori! &#x1F90D;</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Mackenzie</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Lori is a truly gifted healer and the Reiki energy coming through her hands is always lifting me up. I experience lightness and feel embraced by loving and protective energy helping to let go of stress. I enjoy my sessions with her tremendously and the last time, when getting a treatment on her special mat, everything felt emphasized and I could not stop smiling the rest of the day, feeling so uplifted and balanced.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Petra</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>When I booked my appointment, I was feeling completely overwhelmed by life and incredibly stressed out. My anxiety felt like a physical weight, like my chest was vibrating constantly. You have a true gift for helping people center and ground themselves. Not only did I feel an immediate sense of relief during the session, but my heart also felt remarkably light. That peaceful, grounded feeling stayed with me for a week and a half. Thank you for creating such a safe and calming space.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Kerry</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>I would like to highly recommend Lori's skills as a Reiki practitioner. I came out of simple curiosity — I didn't feel broken, but simply stressed at work. Lori did a great job explaining what we would do and making me feel comfortable. At the end, I felt like a weight had been lifted off of my chest. Also, my shoulder, which had been hurting to the touch for months, felt significantly better. Thank you, Lori.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Wyatt</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2>Begin Your Alchemy</h2>
+            <p>Schedule your immersion by following the path below.</p>
+            
+            <div class="form-box">
+                <div class="form-box-header">
+                    <span>🜃</span> Forest Therapy Immersion <span>🜃</span>
+                </div>
+                <div class="form-box-content">
+                    <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLScFC8D9ze9wKXrwCT-QGb6uyGawfXvKLSfw05QR-SPaIZ4ZBQ/viewform?embedded=true">Loading…</iframe>
+                </div>
+            </div>
+
+            <details class="reiki-addon">
+                <summary><span>🜂</span> Reiki Energy Healing and Yoga sessions <span>🜂</span></summary>
+                <div class="addon-content">
+                    <iframe class="form-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSfnZBHLksEERCGPDLlVUQ_I3vFGwzRKyKr1hzcYWjF9ZLcYJA/viewform?embedded=true">Loading…</iframe>
+                </div>
+            </details>
+            
+        </div>
+    </section>
+
+    <!-- ============ CONSULTATION BOX (bottom CTA) ============ -->
+    <div class="consultation-wrapper">
+        <div class="consultation-box">
+            <span class="fern-corner corner-tl"></span>
+            <span class="fern-corner corner-tr"></span>
+            <span class="fern-corner corner-bl"></span>
+            <span class="fern-corner corner-br"></span>
+            <h3>Free 15-Minute Consultation</h3>
+            <p>Have questions about which experience is right for you? Reach out — Lori would love to connect and guide you toward the path that fits.</p>
+            <a href="mailto:foresttherapywithlori@gmail.com" class="cta-button">Email Lori for a Free Consultation</a>
+        </div>
+    </div>
+
+    <section class="instagram-section">
+        <h2>A Glimpse into the Forest</h2>
+        
+        <div class="ig-wrapper">
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/foresttherapywithlori/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/foresttherapywithlori/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/foresttherapywithlori/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">Lori Young</a> (@<a href="https://www.instagram.com/foresttherapywithlori/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">foresttherapywithlori</a>) • Instagram photos and videos</p></div></blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/foresttherapywithlori/" target="_blank" aria-label="Visit Forest Therapy with Lori on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+        <p class="copyright">&copy; 2026 Lori Young. All Rights Reserved.</p>
+        <a href="https://www.vitromedialab.com/" target="_blank" class="footer-link">Made in <span class="vitro-text">Vitro</span></a>
+    </footer>
+
+
+<script async src="//www.instagram.com/embed.js"></script>
+
+</body>
+</html>
