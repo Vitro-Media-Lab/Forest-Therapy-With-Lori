@@ -187,6 +187,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
+            padding-bottom: 100px;
         }
 
         .contact-section {
@@ -266,6 +267,10 @@
         .corner-bl { bottom: -10px; left: -10px; border-radius: 0 25px 0 25px; border-right: none; border-top: none; }
         .corner-br { bottom: -10px; right: -10px; border-radius: 25px 0 25px 0; border-left: none; border-top: none; }
 
+        .reiki-column .corner-tl { top: -16px; left: -16px; }
+        .reiki-column .corner-tr { top: -16px; right: -16px; }
+        .reiki-column .corner-bl { bottom: -16px; left: -16px; }
+        .reiki-column .corner-br { bottom: -16px; right: -16px; }
         .reiki-column h3 {
             font-family: 'Cinzel', serif;
             font-size: 1.5rem;
@@ -477,10 +482,13 @@
             nav ul { gap: 20px; }
             .synergy-section { grid-template-columns: 1fr; }
             .about-container { grid-template-columns: 1fr; gap: 40px; }
+            .offerings-grid { grid-template-columns: 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .consultation-box { padding: 38px 28px; }
 
-            .hero { 
-                padding-top: 220px; 
-                padding-bottom: 50px; 
+            .hero {
+                padding-top: 220px;
+                padding-bottom: 50px;
             }
         }
 
@@ -490,21 +498,195 @@
             .form-embed { height: 1000px; }
         }
 
-        /* --- CONSULTATION BOX --- */
-        .consultation-box {
-            padding-top: 50px;
-            padding-bottom: 20px;
+        /* --- CTA BUTTON --- */
+        .cta-button {
+            display: inline-block;
+            padding: 14px 38px;
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: background 0.35s, color 0.35s;
+            background: #f7f2ea;
+        }
+        .cta-button:hover {
+            background: var(--text-main);
+            color: #fff;
         }
 
-        .consultation-box a {
-            color: var(--gold);
+        /* --- OFFERINGS SECTION --- */
+        .offerings-section {
+            position: relative;
+            padding: 90px 5%;
+            background: var(--bg-void);
+            z-index: 2;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            text-align: center;
+        }
+        .offerings-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--moss);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .section-intro {
+            color: var(--text-muted);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 1rem;
+        }
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .offering-card {
+            border: 1px solid rgba(212, 184, 114, 0.4);
+            background: #fff;
+            padding: 48px 36px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 6px 20px rgba(74, 99, 82, 0.05);
+            transition: border-color 0.35s;
+        }
+        .offering-card:hover { border-color: rgba(212, 184, 114, 0.8); }
+        .offering-card .corner-tl { top: -16px; left: -16px; }
+        .offering-card .corner-tr { top: -16px; right: -16px; }
+        .offering-card .corner-bl { bottom: -16px; left: -16px; }
+        .offering-card .corner-br { bottom: -16px; right: -16px; }
+        .offering-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-bottom: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        .offering-card p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        /* --- CONSULTATION BOX (upgraded) --- */
+        .consultation-wrapper {
+            padding: 50px 5%;
+            background: var(--bg-void);
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .consultation-box {
+            background: rgba(212, 184, 114, 0.08);
+            border: 1.5px solid rgba(212, 184, 114, 0.5);
+            padding: 50px 50px 45px;
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .consultation-box .corner-tl { top: -16px; left: -16px; }
+        .consultation-box .corner-tr { top: -16px; right: -16px; }
+        .consultation-box .corner-bl { bottom: -16px; left: -16px; }
+        .consultation-box .corner-br { bottom: -16px; right: -16px; }
+        .consultation-box h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--moss);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .consultation-box p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.95rem;
+            max-width: 480px;
+            margin: 0 auto 28px;
+            line-height: 1.8;
+        }
+        .consultation-box a:not(.cta-button) {
+            color: var(--moss);
             text-decoration: none;
             transition: opacity 0.3s ease;
         }
-
-        .consultation-box a:hover {
+        .consultation-box a:not(.cta-button):hover {
             opacity: 0.7;
             text-decoration: underline;
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .testimonials-section {
+            position: relative;
+            padding: 90px 5%;
+            background: var(--bg-void);
+            z-index: 2;
+            border-top: 1px solid rgba(212, 184, 114, 0.2);
+            text-align: center;
+        }
+        .testimonials-section h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--moss);
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .testimonial-card {
+            background: #fff;
+            border: 1px solid rgba(212, 184, 114, 0.35);
+            padding: 32px 28px;
+            text-align: left;
+            box-shadow: 0 6px 20px rgba(74, 99, 82, 0.05);
+            transition: border-color 0.35s;
+        }
+        .testimonial-card:hover { border-color: rgba(212, 184, 114, 0.7); }
+        .testimonial-mark {
+            font-size: 2.5rem;
+            color: var(--alchemy-gold);
+            opacity: 0.5;
+            line-height: 1;
+            margin-bottom: 12px;
+            font-family: Georgia, serif;
+            display: block;
+        }
+        .testimonial-card p {
+            color: var(--text-muted);
+            font-weight: 300;
+            font-size: 0.88rem;
+            line-height: 1.9;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testimonial-divider {
+            width: 28px;
+            height: 1px;
+            background: var(--alchemy-gold);
+            opacity: 0.5;
+            margin-bottom: 12px;
+        }
+        .testimonial-author {
+            font-family: 'Cinzel', serif;
+            font-size: 10px;
+            color: var(--moss);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         /* --- FOOTER SOCIAL --- */
@@ -571,6 +753,7 @@
         </a>
         <nav>
             <ul>
+                <li><a href="#offerings">Offerings</a></li>
                 <li><a href="#journey">The Practice</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -587,8 +770,58 @@
             <div class="alchemical-element">🜃 🜄 🜁 🜂</div>
             <h1>Forest Therapy with Lori</h1>
             <p class="">A deeply immersive forest therapy experience, unlocked and amplified through the ancient practice of Reiki.</p>
+            <a href="#contact" class="cta-button">Schedule Your Immersion</a>
         </div>
     </section>
+
+    <!-- ============ OFFERINGS & EXPERIENCES ============ -->
+    <section class="offerings-section" id="offerings">
+        <h2>Offerings &amp; Experiences</h2>
+        <p class="section-intro">Whether you come for the forest, the Reiki, or the yoga — every path leads back to yourself.</p>
+        <div class="offerings-grid">
+
+            <div class="offering-card">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <h3>Forest Therapy Walks</h3>
+                <p>One-on-one or private group immersions in the healing language of the natural world. Slow, intentional, and profoundly restorative.</p>
+            </div>
+
+            <div class="offering-card">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <h3>Yoga Sessions</h3>
+                <p>One-on-one sessions, bachelorette parties, and private group events. Movement that meets you where you are — indoors or in nature.</p>
+            </div>
+
+            <div class="offering-card">
+                <span class="fern-corner corner-tl"></span>
+                <span class="fern-corner corner-tr"></span>
+                <span class="fern-corner corner-bl"></span>
+                <span class="fern-corner corner-br"></span>
+                <h3>Reiki Energy Healing</h3>
+                <p>In-person and distance sessions available via Zoom or Teams. Standalone sessions or as preconditioning before your forest immersion.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ CONSULTATION BOX (below offerings) ============ -->
+    <div class="consultation-wrapper">
+        <div class="consultation-box">
+            <span class="fern-corner corner-tl"></span>
+            <span class="fern-corner corner-tr"></span>
+            <span class="fern-corner corner-bl"></span>
+            <span class="fern-corner corner-br"></span>
+            <h3>Not Sure Where to Begin?</h3>
+            <p>Lori offers a complimentary 15-minute consultation to help you find the right path. No pressure — just presence.</p>
+            <a href="mailto:foresttherapywithlori@gmail.com" class="cta-button">Email Lori for a Free Consultation</a>
+        </div>
+    </div>
 
     <section class="synergy-section" id="journey">
         <div class="forest-column">
@@ -627,6 +860,58 @@
         </div>
     </section>
 
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials-section" id="testimonials">
+        <h2>From Those Who've Walked the Path</h2>
+        <p class="section-intro" style="margin-bottom: 50px;">What others have carried home with them.</p>
+
+        <div class="testimonials-grid">
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Thank you for the wonderful forest bathing experience you guided us through last Saturday. The feelings of goodness &amp; gratitude for the many gifts Nature provided have stayed with me &amp; expanded over the last week. The tea ceremony was a beautiful bonus! Thank you for your loving &amp; positive perspective on our connections to nature &amp; for sharing your expertise.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Tess</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Lori's energy felt so safe and trusting; I don't think I've ever felt that connected to the outside world. The structure of the walk was balanced and I felt that the effects of the experience were immediate and much more noticeable than I was anticipating. I felt incredibly grounded and relaxed during and even after the session. It was like a massage for my brain and soul.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Emily</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Such a beautiful and grounding experience today with Lori during forest therapy. It was the perfect reminder to slow down, reconnect with nature, and simply be present. I left feeling calmer, lighter, and so refreshed. Thank you, Lori, for creating such a peaceful and welcoming space today! 10/10 would absolutely recommend this experience to anyone needing a reset for the mind and soul.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Mackenzie</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>Lori is a truly gifted healer and the Reiki energy coming through her hands is always lifting me up. I experience lightness and feel embraced by loving and protective energy helping to let go of stress. I enjoy my sessions with her tremendously and the last time, when getting a treatment on her special mat, everything felt emphasized and I could not stop smiling the rest of the day, feeling so uplifted and balanced.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Petra</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>My first in-person Reiki session with Lori was an incredibly positive and transformative experience. What truly impressed me were the lasting effects of the session. In the days following, I found myself feeling more centered, calm, and connected. It was a magnificient surprise, and I couldn't be more grateful for Lori's skillful guidance and compassionate presence. Lori's mastery of Reiki became even more evident with each subsequent session I had with her; solidifying my impression that she is a true expert in the field. I would wholeheartedly recommend her to anyone seeking the profound benefits of Reiki healing.</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Kerry</span>
+            </div>
+
+            <div class="testimonial-card">
+                <span class="testimonial-mark">&ldquo;</span>
+                <p>I've been going to Lori for Reiki for a few years now and every time I have a great experience! I had a session on New Years Eve and it was a great decision going into 2025. She is spot on with her intuition every session. She knew I had issues with my left knee and right arm without me telling her, and she saw an image of an eagle, after I had a bald eagle flying alongside my car on my way to the appointment! Our sessions are always full of surprises, psychic hits, and VERY DEEP relaxation. She makes it a full experience with essential oils, intuitively chosen crystals, and honest interest in your own well-being! Can't recommend Lori enough!</p>
+                <div class="testimonial-divider"></div>
+                <span class="testimonial-author">Wyatt</span>
+            </div>
+
+        </div>
+    </section>
+
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <h2>Begin Your Alchemy</h2>
@@ -648,21 +933,21 @@
                 </div>
             </details>
             
-            <div class="services-list">
-                <h3>Additional Offerings</h3>
-                <ul>
-                    <li>One-on-one Forest Therapy or Forest Therapy for a private group</li>
-                    <li>Yoga one-on-ones, yoga for Bachelorette parties or private parties</li>
-                    <li>Reiki energy healing sessions — both distance (over Zoom/Teams) and in-person sessions available</li>
-                </ul>
-            </div>
-
-            <div class="consultation-box">
-                <p>For a free 15-minute consultation please contact Lori at:<br><a href="mailto:foresttherapywithlori@gmail.com">foresttherapywithlori@gmail.com</a></p>
-                <img src="./assets/logo-transparent.png" alt="Forest Therapy With Lori Logo" class="header-logo">
-            </div>
         </div>
     </section>
+
+    <!-- ============ CONSULTATION BOX (bottom CTA) ============ -->
+    <div class="consultation-wrapper">
+        <div class="consultation-box">
+            <span class="fern-corner corner-tl"></span>
+            <span class="fern-corner corner-tr"></span>
+            <span class="fern-corner corner-bl"></span>
+            <span class="fern-corner corner-br"></span>
+            <h3>Free 15-Minute Consultation</h3>
+            <p>Have questions about which experience is right for you? Reach out — Lori would love to connect and guide you toward the path that fits.</p>
+            <a href="mailto:foresttherapywithlori@gmail.com" class="cta-button">Email Lori for a Free Consultation</a>
+        </div>
+    </div>
 
     <section class="instagram-section">
         <h2>A Glimpse into the Forest</h2>
